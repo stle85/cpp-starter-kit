@@ -11,18 +11,12 @@ set(CMDLINE_VERSION "master")
 # --------------------------------------------------------------------------------- #
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -s")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
-include(ExternalProject)
 
-set(CPACK_GENERATOR TBZ2)
-set(CPACK_PACKAGE_VENDOR "unknown")
-set(CPACK_PACKAGE_VERSION_MAJOR 0)
-set(CPACK_PACKAGE_VERSION_MINOR 0)
-set(CPACK_PACKAGE_VERSION_PATCH 1)
-set(CPACK_PACKAGE_FILE_NAME ${PROJECT_NAME})
-set(CPACK_SOURCE_STRIP_FILES TRUE)
-include(CPack)
+include(ExternalProject)
 
 if (NOT TARGET ALL_PROJECT_FILES)
     set(SCAN_GLOB_EXPR * CACHE STRING "Setup file system scanning pattern to display all needed files, default: *")
@@ -38,6 +32,10 @@ endif()
 
 # --------------------------------------------------------------------------------- #
 
+include(cmake/cpack.cmake)
+
+# --------------------------------------------------------------------------------- #
+
 set(HEADERS )
 set(SOURCES )
 set(DEFINITIONS )
@@ -46,19 +44,7 @@ set(DEPENDENCIES )
 
 # --------------------------------------------------------------------------------- #
 
-# cmdline lib from github: command line args parser
-ExternalProject_Add(cmdline
-        URL https://raw.githubusercontent.com/tanakh/cmdline/${CMDLINE_VERSION}/cmdline.h
-        DOWNLOAD_NO_EXTRACT 1
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
-        UPDATE_COMMAND ""
-        INSTALL_COMMAND ${CMAKE_COMMAND}
-        -E copy_if_different
-        <SOURCE_DIR>/../cmdline.h
-        ${CMAKE_BINARY_DIR}/include/cmdline.h)
-include_directories(${PROJECT_BINARY_DIR}/include)
-list(APPEND DEPENDENCIES cmdline)
+include(cmake/externals/cmdline.cmake)
 
 # --------------------------------------------------------------------------------- #
 

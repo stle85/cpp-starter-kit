@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmdline.h>
 #include "sample.h"
 
 int main(const int, const char **) {
