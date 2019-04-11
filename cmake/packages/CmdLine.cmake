@@ -1,4 +1,9 @@
+# --------------------------------------------------------------------------------- #
 # cmdline lib from github: command line args parser
+
+# version
+set(CMDLINE_VERSION "master")
+
 ExternalProject_Add(cmdline
         URL https://raw.githubusercontent.com/tanakh/cmdline/${CMDLINE_VERSION}/cmdline.h
         DOWNLOAD_NO_EXTRACT 1
