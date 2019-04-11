@@ -1,7 +1,14 @@
 # --------------------------------------------------------------------------------- #
 
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+
+include("cmake/HunterGate.cmake")
+HunterGate(
+        URL "https://github.com/ruslo/hunter/archive/v0.23.152.tar.gz"
+        SHA1 "0c9801f60a8149c3105db04501bbcfb155581b7d"
+)
 project(template)
+set(version "0.0.1")
 
 # --------------------------------------------------------------------------------- #
 
@@ -18,21 +25,9 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
 
 include(ExternalProject)
 
-if (NOT TARGET ALL_PROJECT_FILES)
-    set(SCAN_GLOB_EXPR * CACHE STRING "Setup file system scanning pattern to display all needed files, default: *")
-    set(SCAN_DUMMY_PROG "true" CACHE STRING "Dummy prog for dummy target, default: true")
-    file(GLOB_RECURSE ALL_RPOJECT_FILES_LIST LIST_DIRECTORIES false RELATIVE ${CMAKE_SOURCE_DIR} ${SCAN_GLOB_EXPR})
-    add_custom_target(ALL_PROJECT_FILES ${SCAN_DUMMY_PROG} SOURCES ${ALL_RPOJECT_FILES_LIST})
-endif()
-
-# Forward real toolchain file
-if (CMAKE_TOOLCHAIN_FILE_FORWARD)
-    include(${CMAKE_TOOLCHAIN_FILE_FORWARD})
-endif()
-
 # --------------------------------------------------------------------------------- #
 
-include(cmake/cpack.cmake)
+include(cmake/CPack.cmake)
 
 # --------------------------------------------------------------------------------- #
 
@@ -44,7 +39,13 @@ set(DEPENDENCIES )
 
 # --------------------------------------------------------------------------------- #
 
-include(cmake/externals/cmdline.cmake)
+#include(cmake/packages/CmdLine.cmake)
+#include(cmake/packages/CrashPad.cmake)
+
+# --------------------------------------------------------------------------------- #
+
+include(cmake/tools/CppCheck.cmake)
+include(cmake/tools/CLangFormat.cmake)
 
 # --------------------------------------------------------------------------------- #
 
