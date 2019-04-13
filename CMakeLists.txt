@@ -10,8 +10,8 @@ HunterGate(
 )
 
 # Define project name and version
-project(template)
-set(version "0.0.1")
+project(app)
+set(PROJECT_VERSION "0.0.1")
 
 # --------------------------------------------------------------------------------- #
 # Configure CPP flags

@@ -17,6 +17,10 @@ CTestTestfile.cmake
 
 # CMake build directories
 cmake-build-debug
+build
 
 # Skip CLion directory
 .idea
+
+# Skip VSCode directory
+.vscode
