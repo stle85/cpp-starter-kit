@@ -1,13 +1,12 @@
 #include <iostream>
 #include "sample.h"
-
-void do_something() {
-  std::cout << "doing something" << std::endl;
-  std::cout << message << std::endl;
-}
+#include "stacktraceDump.h"
 
 int main(const int, const char**) {
-  do_something();
+    registerStackTraceDump();
 
-  return 0;
+    std::cout << "App running..." << std::endl;
+    std::cout << message << std::endl;
+
+    return 0;
 }

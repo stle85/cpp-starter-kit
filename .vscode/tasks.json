@@ -5,23 +5,35 @@
     "tasks": [
         {
             "label": "Docker: Build Containers",
+            "type": "shell",
             "command": "${workspaceFolder}/scripts/build.sh",
+            "presentation": {
+                "clear": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         },
         {
             "label": "CMake: Initialize",
             "command": "${workspaceFolder}/scripts/run.sh",
             "args": [
-                "cmake", "-DCMAKE_BUILD_TYPE=Debug", "/opt"
+                "cmake",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "/opt"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
-            }
+            },
+            "problemMatcher": []
         },
         {
             "label": "Make: Build Project",
             "command": "${workspaceFolder}/scripts/run.sh",
             "args": [
-                "make", "-j", "2"
+                "make",
+                "-j",
+                "2"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

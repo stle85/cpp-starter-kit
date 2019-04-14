@@ -2,12 +2,19 @@
 
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
 
+# Change cmake policy
+cmake_policy(SET CMP0054 OLD)
+cmake_policy(SET CMP0045 OLD)
+
 # Include package manager
+set (HUNTER_ROOT build/hunter)
+set (HUNTER_BUILD_SHARED_LIBS OFF)
+
 include("cmake/HunterGate.cmake")
 HunterGate(
-        URL "https://github.com/ruslo/hunter/archive/v0.23.152.tar.gz"
-        SHA1 "0c9801f60a8149c3105db04501bbcfb155581b7d"
-)
+    URL "https://github.com/ruslo/hunter/archive/v0.23.152.tar.gz"
+    SHA1 "0c9801f60a8149c3105db04501bbcfb155581b7d"
+    )
 
 # Define project name and version
 project(app)
@@ -37,7 +44,7 @@ set(DEPENDENCIES )
 # Packages
 
 #include(cmake/packages/CmdLine.cmake)
-#include(cmake/packages/CrashPad.cmake)
+include(cmake/packages/Boost.cmake)
 
 # --------------------------------------------------------------------------------- #
 # Tools
@@ -72,8 +79,9 @@ endif()
 # Install configuration
 
 install(TARGETS ${PROJECT_NAME}
-        RUNTIME
-        DESTINATION .
-        COMPONENT applications)
+    RUNTIME
+    DESTINATION .
+    COMPONENT applications
+    )
 
 # --------------------------------------------------------------------------------- #
