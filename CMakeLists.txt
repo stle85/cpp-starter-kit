@@ -32,6 +32,11 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
 include(ExternalProject)
 
 # --------------------------------------------------------------------------------- #
+# Include cotire for speed up compilation
+
+include(cmake/Cotire.cmake)
+
+# --------------------------------------------------------------------------------- #
 # Define base variables
 
 set(HEADERS )
@@ -74,6 +79,8 @@ endif()
 if(LIBRARIES)
     target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBRARIES})
 endif()
+
+cotire(${PROJECT_NAME})
 
 # --------------------------------------------------------------------------------- #
 # Install configuration
