@@ -7,6 +7,9 @@
             "label": "Docker: Build Containers",
             "type": "shell",
             "command": "${workspaceFolder}/scripts/build.sh",
+            "windows": {
+                "command": "${workspaceFolder}/scripts/build.cmd"
+            },
             "presentation": {
                 "clear": true,
                 "reveal": "always",
@@ -17,6 +20,9 @@
         {
             "label": "CMake: Initialize",
             "command": "${workspaceFolder}/scripts/run.sh",
+            "windows": {
+                "command": "${workspaceFolder}/scripts/run.cmd"
+            },
             "args": [
                 "cmake",
                 "-DCMAKE_BUILD_TYPE=Debug",
