@@ -22,13 +22,17 @@
                 "pipeProgram": "docker",
                 "pipeCwd": "${workspaceRoot}",
                 "pipeArgs": [
-                    "exec", "-i", "app", "sh", "-c"
+                    "exec",
+                    "-i",
+                    "app",
+                    "sh",
+                    "-c"
                 ],
                 "quoteArgs": false,
                 "debuggerPath": "/usr/bin/gdb"
             },
             "sourceFileMap": {
-                "/opt":"${workspaceFolder}"
+                "/opt": "${workspaceFolder}"
             },
         }
     ]

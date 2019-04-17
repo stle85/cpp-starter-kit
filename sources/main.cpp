@@ -3,7 +3,7 @@
 #include "stacktraceDump.h"
 
 int main(const int, const char**) {
-    registerStackTraceDump();
+    StacktraceDump::reg("stacktrace.dump");
 
     std::cout << "App running..." << std::endl;
     std::cout << message << std::endl;

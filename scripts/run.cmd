@@ -1,5 +1,6 @@
-docker stop app
-docker rm app
+@echo off
+docker stop app > nul
+docker rm app > nul
 
 docker run ^
 	--name app ^

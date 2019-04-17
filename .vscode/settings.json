@@ -63,6 +63,7 @@
         "utility": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Disabled"
 
 }
