@@ -17,7 +17,7 @@
                     }
                 ]
             },
-            // "preLaunchTask": "Docker: Run Debugging Container",
+            "preLaunchTask": "Docker: Run Debugging Container",
             "pipeTransport": {
                 "pipeProgram": "docker",
                 "pipeCwd": "${workspaceRoot}",

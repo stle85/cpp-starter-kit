@@ -50,6 +50,7 @@ set(DEPENDENCIES )
 
 #include(cmake/packages/CmdLine.cmake)
 include(cmake/packages/Boost.cmake)
+include(cmake/packages/Cereal.cmake)
 
 # --------------------------------------------------------------------------------- #
 # Tools
@@ -61,7 +62,10 @@ include(cmake/tools/CLangFormat.cmake)
 # --------------------------------------------------------------------------------- #
 # Find sources
 
-aux_source_directory(sources SOURCES)
+include_directories(${PROJECT_SOURCE_DIR}/sources)
+
+file(GLOB_RECURSE HEADERS ${PROJECT_SOURCE_DIR}/sources/*.h)
+file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/sources/*.cpp)
 
 # --------------------------------------------------------------------------------- #
 # Build configuration

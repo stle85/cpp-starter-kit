@@ -53,6 +53,26 @@
             }
         },
         {
+            "label": "Make: Clean Project",
+            "command": "${workspaceFolder}/scripts/run.sh",
+            "windows": {
+                "command": "${workspaceFolder}/scripts/run.cmd"
+            },
+            "args": [
+                "make",
+                "-j",
+                "2",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Run",
             "command": "${workspaceFolder}/scripts/run.sh",
             "windows": {

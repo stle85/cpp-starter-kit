@@ -9,8 +9,7 @@
 class StacktraceDump {
    public:
     /**
-     * @brief
-     *
+     * @brief Register dump creation on failure.     *
      */
     static const void reg(const std::string &dumpFilePath);
 
