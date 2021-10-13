@@ -17,7 +17,6 @@ def generate_compilation_database(args):
     ]
 
     subprocess.check_call(["bazel", "build"] + bazel_options + [
-        "--config=docker_compose",
         "--aspects=@bazel_compdb//:aspects.bzl%compilation_database_aspect",
         "--output_groups=compdb_files,header_files"
     ] + args.bazel_targets)
