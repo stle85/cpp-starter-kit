@@ -1,22 +1,23 @@
 # Information
 
+## Compiler
+
+[Clang](https://clang.llvm.org/) as C/C++ compiler.
+
+## Build tools
+
+[Bazel](https://bazel.build/) as build system.
+
 ## VS Code extensions
 
 ### Necessary 
-| Name | Code name | Description |
-| -    | -         | -           |
-| [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) | [ms-vscode.cpptools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) | The extension adds language support for C/C++ |
-| [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode) | [visualstudioexptteam.vscodeintellicode](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode) | The extension provides AI-assisted development features for developers in IDE, with insights based on understanding your code context combined with machine learning |
-| [Doxygen Documentation Generator](https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen) | [cschlosser.doxdocgen](https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen) | The extension provides Doxygen Documentation generation on the fly by starting a Doxygen comment block and pressing Enter |
-| [CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake) | [twxs.cmake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake) | The extension provides support for CMake(support file extension and syntax) |
-| [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) | [alefragnani.project-manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) | The extension helps you to easily access your projects |
-| [Task Runner](https://marketplace.visualstudio.com/items?itemName=sanaajani.taskrunnercode) | [sanaajani.taskrunnercode](https://marketplace.visualstudio.com/items?itemName=sanaajani.taskrunnercode) | The extension adds an additional "Task Runner" view in your Explorer Pane to visualize and individually run the auto-detected tasks in your project |
-
-### Additional
-
-| Name | Code name | Description |
-| -    | -         | -           |
-| [IntelliJ IDEA Keybindings](https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings) | [k--kato.intellij-idea-keybindings](https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings) | Port of IntelliJ IDEA key bindings for VS Code |
-| [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | A basic spell checker that works well with camelCase code |
-| [Docker](https://marketplace.visualstudio.com/items?itemName=peterjausovec.vscode-docker) | [peterjausovec.vscode-docker](https://marketplace.visualstudio.com/items?itemName=peterjausovec.vscode-docker) | The extension makes it easy to build, manage and deploy containerized applications from IDE |
-
+| Name                                                         | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) | Provides C/C++ language IDE features for VS Code using [clangd](https://clangd.llvm.org/). |
+| [Better C++ Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-cpp-syntax) | Provides better syntex highlight for C/C++.                  |
+| [Doxygen Documentation Generator](https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen) | Provides Doxygen documentation generation on the fly.        |
+| [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) | Provides debugging via LLDB debugger.                        |
+| [Native Debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug) | Native VSCode debugger.                                      |
+| [Clang-Format](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format) | The tool to format C/C++/Java/JavaScript/Objective-C/Objective-C++/Protobuf code. |
+| [Bazel](https://marketplace.visualstudio.com/items?itemName=BazelBuild.vscode-bazel) | Provides support for Bazel build system in Visual Studio.    |
+| [IntelliJ IDEA Keybindings](https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings) | The port of IntelliJ IDEA key bindings for VS Code.          |

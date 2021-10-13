@@ -1,26 +1,20 @@
-# CMake temporary files
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-cmake_install.cmake
-
-# Other CMake generated stuff
-Testing
-Makefile
-install_manifest.txt
+# Build
+**/.DS_Store
+*.bzlc
+.clangd
+.clwb/
+/.cache
+/bazel-*
+/build
+bazel.output.txt
 compile_commands.json
-_deps
+explain.log
+user.bazelrc
 
-# CTest files
-CTestTestfile.cmake
-
-# CMake build directories
-cmake-build-debug
-build
-
-# Skip CLion directory
-.idea
-
-# Skip VSCode directory
+# IDE
+.idea/
+.vimrc
+.vs
 .vscode
+*~
+**/*.iml
