@@ -1,10 +1,5 @@
 run --color=yes
 build --color=yes
 
-# Enable Clang
-build --action_env=BAZEL_COMPILER=clang
-build --action_env=CC=clang
-build --action_env=CXX=clang++
-
 # Set C++ standard
-build --cxxopt=-std=c++17
+build --cxxopt=-std=c++20
